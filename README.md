@@ -1,5 +1,10 @@
 # finitediff_forward -- Forward Finite Difference Method
 
+### Install
+```
+clib install hcnn/finitediff_forward
+```
+
 ### Run Test Skrip
 Run `test.c` via
 
