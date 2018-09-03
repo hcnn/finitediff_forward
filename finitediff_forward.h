@@ -1,9 +1,11 @@
 #ifndef FINITEDIFF_FORWARD_H
 #define FINITEDIFF_FORWARD_H
 
-void finitediff_forward(double (*)(double*, int), 
+#include <stddef.h>
+
+void finitediff_forward(double (*)(const double*, size_t), 
                         double *, 
-                        int , 
+                        size_t , 
                         double , 
                         double *);
 

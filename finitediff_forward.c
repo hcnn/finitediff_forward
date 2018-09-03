@@ -1,13 +1,13 @@
 #include "finitediff_forward.h"
 
-void finitediff_forward(double (*f)(double*, int), 
+void finitediff_forward(double (*f)(const double*, size_t), 
                         double *x, 
-                        int n, 
+                        size_t n, 
                         double h, 
                         double *g){
     double tmp;
     double f0 = f(x,n);
-    for (int i=0; i<n; i++){
+    for (size_t i=0; i<n; i++){
         tmp = x[i]; //store temporarly
         x[i] += h;  //add bandwidth param
         g[i] = (f(x,n) - f0) / h;

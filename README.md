@@ -23,7 +23,7 @@ python3 test.py
 In your application you can use `typedef` to declare the function pointer. 
 
 ```
-typedef double (*FUNC_PTR)(double *, int);
+typedef double (*FUNC_PTR)(const double *, size_t);
 ...
 int main(...){
     FUNC_PTR evalfunc = &myfunc;
