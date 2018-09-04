@@ -9,6 +9,7 @@ clib install hcnn/finitediff_forward
 Run `test.c` via
 
 ```
+make deps
 make
 ```
 
@@ -17,19 +18,3 @@ Compare with python
 ```
 python3 test.py
 ```
-
-
-### Use typedef for the function pointer
-In your application you can use `typedef` to declare the function pointer. 
-
-```
-typedef double (*FUNC_PTR)(const double *, size_t);
-...
-int main(...){
-    FUNC_PTR evalfunc = &myfunc;
-    ...
-}
-```
-
-I did not implemented here because the `typedef` should be declared at some other level.
-
